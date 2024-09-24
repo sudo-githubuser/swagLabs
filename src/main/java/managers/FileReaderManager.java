@@ -11,7 +11,7 @@ public class FileReaderManager {
 
     public static FileReaderManager getInstance(){return fileReaderManager;}
 
-    public static ConfigFileReader getConfigFileReader() {
+    public static ConfigFileReader getConfigReader() {
         return (configFileReader == null) ? new ConfigFileReader() : configFileReader;
     }
 }
