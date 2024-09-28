@@ -10,7 +10,6 @@ Feature: Login
 Scenario: Successful login as standard user
   When Enters "standard_user"
   * Enters "secret_sauce"
-  * Login
   Then User logged in successfully
 
 Scenario: Login as locked-out-user
