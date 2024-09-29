@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74a4a685-4bf6-47a0-935f-256cb3da078c" name="Changes" comment="Created login scenario and step definition file boilerplate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/managers/PageObjectManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/objectRepository/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/TestContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/objectRepository/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objectRepository/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/functionalTests/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/functionalTests/Login.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

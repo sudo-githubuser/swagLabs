@@ -1,44 +1,65 @@
 package stepDefinitions;
 
+import cucumber.TestContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import objectRepository.LoginPage;
 
 public class Login {
-    @Given("^User enters \"([^\"]*)\" in the \"([^\"]*)\"$")
-    public void userEntersInThe(String arg0, String arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        //throw new cucumber.api.PendingException();
+
+    TestContext testContext;
+    LoginPage loginPage;
+
+    public Login (TestContext context){
+        testContext = context;
+        loginPage = testContext.getPageObjectManager().getLoginPage();
+    }
+    @Given("User lands on login page")
+    public void userLandsOnLoginPage() {
+        loginPage.launchURL();
     }
 
-    @Then("^User is in \"([^\"]*)\" homepage$")
-    public void userIsInHomepage(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        //throw new cucumber.api.PendingException();
+//    @Then("User is in {String} homepage")
+//    public void userIsInHomepage(String s){
+//        if(loginPage.validateLoginPage(s)){
+//            System.out.println("User is in Swag Labs login page");
+//        } else { System.out.println("User is not in Swag Labs login page"); }
+//    }
+
+    @When("Enters password {string}")
+    public void entersPassword(String pwd) {
+        loginPage.enterPassword(pwd);
     }
 
-    @When("^Enters \"([^\"]*)\"$")
-    public void enters(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        //throw new cucumber.api.PendingException();
+    @When("Enters username {string}")
+    public void entersUsername(String uName) {
+        loginPage.enterUserName(uName);
     }
 
-    @When("^stepDefinitions.Login$")
-    public void login() {
+    @Then("User is in {string} homepage")
+    public void userIsInHomepage(String s) {
+        if(loginPage.validateLoginPage(s)){
+            System.out.println("User is in Swag Labs login page");
+        } else { System.out.println("User is not in Swag Labs login page"); }
     }
 
-    @Then("^User logged in successfully$")
+    @Then("User logged in successfully")
     public void userLoggedInSuccessfully() {
+        loginPage.login();
     }
 
-    @Then("^\"([^\"]*)\" message is displayed$")
-    public void messageIsDisplayed(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        //throw new cucumber.api.PendingException();
+    @Then("{string} message is displayed")
+    public void messageIsDisplayed(String eMessage) {
+        if(loginPage.errorMessage().contains(eMessage)){
+            System.out.println("Error message " + loginPage.errorMessage() + " is displayed");
+        } else {
+            System.out.println(loginPage.errorMessage());
+        }
     }
 
-    @And("^login is unsuccessful$")
+    @And("login is unsuccessful")
     public void loginIsUnsuccessful() {
     }
 }

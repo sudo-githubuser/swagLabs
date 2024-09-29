@@ -30,16 +30,23 @@ public class LoginPage {
     @FindBy(how = How.XPATH, using = "//input[@name='login-button']")
     private WebElement loginBtn;
 
+    @FindBy(how = How.XPATH, using = "//div[@class='error-message-container error']/h3")
+    private WebElement errorMsg;
+
     public void launchURL(){
         driver.navigate().to(FileReaderManager.getConfigReader().getApplicationURL());
     }
 
-    public void validateLoginPage(String s){
+    public boolean validateLoginPage(String s){
         loginPage.getText().equalsIgnoreCase(s);
+        return true;
     }
 
     public void enterUserName(String uName){userName.sendKeys(uName);}
     public void enterPassword(String pwd){password.sendKeys(pwd);}
     public void login(){loginBtn.click();}
+    public String errorMessage(){
+        return errorMsg.getText();
+    }
 
 }
