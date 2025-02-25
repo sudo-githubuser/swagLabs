@@ -1,4 +1,4 @@
-This is a a0utomation testing project.
+This is an automation testing project.
 
 URL used for testing: https://www.saucedemo.com/v1/
 
@@ -10,7 +10,7 @@ To do:
 
 Implement Extent reports
 
-Implement headless testing option
+Implement a headless testing option
 
 More functionality testing
 
