@@ -31,19 +31,19 @@ public class WebDriverManager {
             /* Added the below lines of code for Github action execution */
             io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--headless");
+//            options.addArguments("--no-sandbox");
+//            options.addArguments("--disable-dev-shm-usage");
+//            options.addArguments("--headless");
             options.addArguments("--remote-allow-origins=*");
-            options.addArguments("--disable-extensions");
-            options.addArguments("--proxy-server='direct://'");
-            options.addArguments("--proxy-bypass-list=*");
-            options.addArguments("--start-maximized");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--ignore-certificate-errors");
-            options.addArguments("--no-first-run");
-            options.addArguments("--no-default-browser-check");
-            options.addArguments("--test-type");
+//            options.addArguments("--disable-extensions");
+//            options.addArguments("--proxy-server='direct://'");
+//            options.addArguments("--proxy-bypass-list=*");
+//            options.addArguments("--start-maximized");
+//            options.addArguments("--disable-gpu");
+//            options.addArguments("--ignore-certificate-errors");
+//            options.addArguments("--no-first-run");
+//            options.addArguments("--no-default-browser-check");
+//            options.addArguments("--test-type");
 
             driver = new ChromeDriver(options);
             break;
