@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a4a685-4bf6-47a0-935f-256cb3da078c" name="Changes" comment="Created login scenario and step definition file boilerplate">
+    <list default="true" id="74a4a685-4bf6-47a0-935f-256cb3da078c" name="Changes" comment="Reading data from Excel file is implemented.">
+      <change afterPath="$PROJECT_DIR$/reports/ExtentReport_20250305_162539.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utility/ExcelFileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config/TestConfig.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/ExtentReport_20250302_232839.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/ExtentReport_20250304_195835.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataProvider/ConfigFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataProvider/ConfigFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/managers/ExtentReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/ExtentReportManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/managers/FileReaderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/FileReaderManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/managers/PageObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/PageObjectManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/managers/WebDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/WebDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/objectRepository/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objectRepository/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/configs/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configs/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/TestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/TestContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Login.java" afterDir="false" />
     </list>
@@ -40,34 +52,37 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2lvZMTF1UauGs5ISVuTzNlsMRoA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/prave/IdeaProjects/swagLabs",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/prave/IdeaProjects/swagLabs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\prave\IdeaProjects\swagLabs\src\main\resources\drivers" />
@@ -125,6 +140,11 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="origin/extentReport" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="origin/login" />
                 </option>
               </RecentGroup>
@@ -143,7 +163,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/login" />
+                        <option value="origin/extentReport" />
                       </list>
                     </value>
                   </entry>
@@ -159,6 +179,7 @@
     <MESSAGE value="added ConfigFileReader and DriverType." />
     <MESSAGE value="added webdriver manager. updated ConfigFileReader and FileReaderManager." />
     <MESSAGE value="Created login scenario and step definition file boilerplate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created login scenario and step definition file boilerplate" />
+    <MESSAGE value="Reading data from Excel file is implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reading data from Excel file is implemented." />
   </component>
 </project>

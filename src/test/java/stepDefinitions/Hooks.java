@@ -2,12 +2,12 @@ package stepDefinitions;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import cucumber.TestContext;
 import io.cucumber.java.*;
-import managers.ExtentReportManager;
+import utility.ExtentReportManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import com.aventstack.extentreports.Status;
 
 import java.util.Base64;
 
@@ -56,10 +56,8 @@ public class Hooks {
         }
 
         if (scenario.isFailed()) {
-            //currentTest.log(Status.FAIL, "**Step:** " + stepDescription);
             currentTest.log(Status.FAIL, "Step Failed:<br><img src='data:image/png;base64," + base64Screenshot + "'/>");
         } else {
-            //currentTest.log(Status.FAIL, "**Step:** " + stepDescription);
             currentTest.log(Status.PASS, "Step Passed:<br><img src='data:image/png;base64," + base64Screenshot + "'/>");
         }
     }

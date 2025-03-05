@@ -1,4 +1,4 @@
-package managers;
+package utility;
 
 import objectRepository.LoginPage;
 import org.openqa.selenium.WebDriver;

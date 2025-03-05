@@ -1,7 +1,6 @@
-package managers;
+package utility;
 
 import enums.DriverType;
-import io.github.bonigarcia.wdm.managers.InternetExplorerDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,7 +14,7 @@ public class WebDriverManager {
     private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
 
     public WebDriverManager(){
-        driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
+        driverType = FileReaderManager.getConfigReader().getBrowser();
     }
 
     public WebDriver getDriver(){
@@ -25,16 +24,15 @@ public class WebDriverManager {
 
     private WebDriver createDriver() {
         switch (driverType) {
-            case FIREFOX: driver = new FirefoxDriver();
-            break;
-            case CHROME:
-            /* Added the below lines of code for Github action execution */
-            io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
-            ChromeOptions options = new ChromeOptions();
+            case FIREFOX -> driver = new FirefoxDriver();
+            case CHROME -> {
+                /* Added the below lines of code for Github action execution */
+                io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
+                ChromeOptions options = new ChromeOptions();
 //            options.addArguments("--no-sandbox");
 //            options.addArguments("--disable-dev-shm-usage");
 //            options.addArguments("--headless");
-            options.addArguments("--remote-allow-origins=*");
+                options.addArguments("--remote-allow-origins=*");
 //            options.addArguments("--disable-extensions");
 //            options.addArguments("--proxy-server='direct://'");
 //            options.addArguments("--proxy-bypass-list=*");
@@ -45,13 +43,12 @@ public class WebDriverManager {
 //            options.addArguments("--no-default-browser-check");
 //            options.addArguments("--test-type");
 
-            driver = new ChromeDriver(options);
-            break;
-            case INTERNETEXPLORER: driver = new InternetExplorerDriver();
-            break;
+                driver = new ChromeDriver(options);
+            }
+            case INTERNETEXPLORER -> driver = new InternetExplorerDriver();
         }
 
-        driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitWait());
+        driver.manage().timeouts().implicitlyWait(FileReaderManager.getConfigReader().getImplicitWait());
         return driver;
     }
     public void closeDriver() {driver.close();}

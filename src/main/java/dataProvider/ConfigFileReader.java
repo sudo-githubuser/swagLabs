@@ -31,6 +31,12 @@ public class ConfigFileReader {
         }
     }
 
+    public String getExcelFilePath() {
+        String excelFilePath = properties.getProperty("excelFilePath");
+        if (excelFilePath != null) return excelFilePath;
+        else throw new RuntimeException("Excel file path not specified in the configuration.properties file");
+    }
+
     public String getDriverPath(){
         String driverPath = properties.getProperty("driverPath");
         if(driverPath != null) return driverPath;
