@@ -1,4 +1,4 @@
-package managers;
+package utility;
 
 import dataProvider.ConfigFileReader;
 
