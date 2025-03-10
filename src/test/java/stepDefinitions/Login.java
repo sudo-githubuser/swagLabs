@@ -2,6 +2,8 @@ package stepDefinitions;
 
 import com.aventstack.extentreports.Status;
 import cucumber.TestContext;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,18 +20,17 @@ public class Login {
         testContext = context;
         loginPage = testContext.getPageObjectManager().getLoginPage();
     }
+
+//    @Before
+//    public void beforeScenario(Scenario scenario) {
+//        ExtentReportManager.createTest(scenario.getName());
+//    }
+
     @Given("User lands on login page")
     public void userLandsOnLoginPage() {
         loginPage.launchURL();
         ExtentReportManager.getTest().log(Status.INFO, "Step: User is on login page");
     }
-
-//    @Then("User is in {String} homepage")
-//    public void userIsInHomepage(String s){
-//        if(loginPage.validateLoginPage(s)){
-//            System.out.println("User is in Swag Labs login page");
-//        } else { System.out.println("User is not in Swag Labs login page"); }
-//    }
 
     @When("Enters password {string}")
     public void entersPassword(String pwd) {

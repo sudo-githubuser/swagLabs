@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74a4a685-4bf6-47a0-935f-256cb3da078c" name="Changes" comment="Reading data from Excel file is implemented.">
-      <change afterPath="$PROJECT_DIR$/reports/ExtentReport_20250305_162539.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utility/ExcelFileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config/TestConfig.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/ExtentReport_20250302_232839.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/ExtentReport_20250304_195835.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataProvider/ConfigFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataProvider/ConfigFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managers/ExtentReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/ExtentReportManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managers/FileReaderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/FileReaderManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managers/PageObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/PageObjectManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managers/WebDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/WebDriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/objectRepository/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objectRepository/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/configs/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configs/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/TestContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/TestContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/ExtentReport_20250305_162539.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utility/ExtentReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/ExtentReportManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/functionalTests/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/functionalTests/login.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

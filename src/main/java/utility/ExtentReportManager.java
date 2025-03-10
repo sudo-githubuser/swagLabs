@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class ExtentReportManager {
     public static ExtentReports extent;
-    public static ExtentTest test;
+    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
     public static ExtentReports getReportInstance(){
         if(extent == null){
@@ -32,11 +32,19 @@ public class ExtentReportManager {
         return extent;
     }
 
-    public static void setTest(ExtentTest testInstance){
-        test = testInstance;
+    public static ExtentTest createTest(String testName){
+        ExtentTest test = getReportInstance().createTest(testName);
+        extentTest.set(test);
+        return test;
+    }
+
+    public static void flush(){
+        if(extent != null){
+            extent.flush();
+        }
     }
 
     public static ExtentTest getTest(){
-        return test;
+        return extentTest.get();
     }
 }

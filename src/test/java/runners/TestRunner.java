@@ -1,10 +1,12 @@
 package runners;
 
 import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.junit.runner.RunWith;
+import org.testng.annotations.DataProvider;
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class) // Commented out for parallel execution
 @CucumberOptions(
         features = "src/test/resources/functionalTests",
         glue = { "stepDefinitions" },
@@ -14,5 +16,10 @@ import org.junit.runner.RunWith;
 )
 
 
-public class TestRunner {
+public class TestRunner extends AbstractTestNGCucumberTests {
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }

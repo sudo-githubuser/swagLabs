@@ -20,8 +20,8 @@ public class Hooks {
     @Before
     public void setUp(Scenario scenario){
         // Extent test initialization
-        ExtentTest test = ExtentReportManager.getReportInstance().createTest(scenario.getName());
-        ExtentReportManager.setTest(test);
+        ExtentTest test = ExtentReportManager.createTest(scenario.getName());
+        System.out.println("Executing Scenario: " + scenario.getName());
     }
 
     @After
