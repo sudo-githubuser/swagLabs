@@ -33,6 +33,7 @@
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-testng</artifactId>
     <version>7.11.1</version>
+    <scope>test</scope>
   </dependency>
   <dependency>
     <groupId>io.cucumber</groupId>
@@ -55,29 +56,18 @@
     <version>7.7.1</version>
     <scope>test</scope>
   </dependency>
-  <dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-api</artifactId>
-    <version>5.9.2</version>
-    <scope>test</scope>
-  </dependency>
-  <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>3.8.1</version>
-    <scope>test</scope>
-  </dependency>
+<!--  <dependency>-->
+<!--    <groupId>org.junit.jupiter</groupId>-->
+<!--    <artifactId>junit-jupiter-api</artifactId>-->
+<!--    <version>5.9.2</version>-->
+<!--    <scope>test</scope>-->
+<!--  </dependency>-->
   <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-junit</artifactId>
     <version>7.3.4</version>
     <scope>test</scope>
   </dependency>
-  <!--    <dependency>-->
-  <!--      <groupId>com.relevantcodes</groupId>-->
-  <!--      <artifactId>extentreports</artifactId>-->
-  <!--      <version>2.40.2</version>-->
-  <!--    </dependency>-->
   <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
@@ -111,22 +101,22 @@
     <artifactId>cell</artifactId>
     <version>0.1.5</version>
   </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-api</artifactId>
-      <version>4.8.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-chrome-driver</artifactId>
-      <version>4.8.0</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
-      <scope>test</scope>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>org.seleniumhq.selenium</groupId>-->
+<!--      <artifactId>selenium-api</artifactId>-->
+<!--      <version>4.8.0</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.seleniumhq.selenium</groupId>-->
+<!--      <artifactId>selenium-chrome-driver</artifactId>-->
+<!--      <version>4.8.0</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>junit</groupId>-->
+<!--      <artifactId>junit</artifactId>-->
+<!--      <version>4.13.2</version>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
   </dependencies>
 
   <build>
@@ -137,6 +127,12 @@
     <version>3.1.2</version>
     <configuration>
       <workingDirectory>${project.basedir}</workingDirectory>
+      <properties>
+        <property>
+          <name>dataproviderthreadcount</name>
+          <value>11</value>
+        </property>
+      </properties>
     </configuration>
   </plugin>
   </plugins>
