@@ -44,16 +44,30 @@ jobs:
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Create Custom index.html
+      - name: Find Latest Extent Report
+        id: find_report
+        shell: pwsh
         run: |
-          echo ^<^!DOCTYPE html^> > reports/index.html
-          echo ^<html lang="en"^> >> reports/index.html
-          echo ^<head^>^<meta http-equiv="refresh" content="0;url=report.html"^>^</head^> >> reports/index.html
-          echo ^<body^>^<p^>Redirecting to Extent Reports...^</p^>^</body^> >> reports/index.html
-          echo ^</html^> >> reports/index.html
+          $latestReport = Get-ChildItem -Path reports\*.html | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+          Write-Output "Latest Report Found: $($latestReport.Name)"
+          echo "REPORT_FILE=$($latestReport.Name)" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Create Custom index.html
+        shell: pwsh
+        run: |
+          $reportFile = "${{ env.REPORT_FILE }}"
+          $indexContent = @"
+          <!DOCTYPE html>
+          <html lang='en'>
+          <head><meta http-equiv='refresh' content='0; url=$reportFile'></head>
+          <body><p>Redirecting to latest Extent Report: <a href='$reportFile'>$reportFile</a></p></body>
+          </html>
+          "@
+          $indexContent | Out-File -FilePath reports\index.html -Encoding utf8
 
       - name: Check Files in Reports Folder
-        run: dir reports
+        shell: pwsh
+        run: Get-ChildItem -Path reports
 
       - name: Upload Reports to GitHub Pages
         uses: actions/upload-pages-artifact@v3
