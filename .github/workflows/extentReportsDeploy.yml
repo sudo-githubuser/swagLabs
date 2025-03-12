@@ -52,6 +52,9 @@ jobs:
           echo ^<body^>^<p^>Redirecting to Extent Reports...^</p^>^</body^> >> reports/index.html
           echo ^</html^> >> reports/index.html
 
+      - name: Check Files in Reports Folder
+        run: dir reports
+
       - name: Upload Reports to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
