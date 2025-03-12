@@ -8,8 +8,6 @@
 ![Extent Reports](https://img.shields.io/badge/Extent%20Reports-Reporting-orange?style=flat-rounded)
 ![Page Object Model](https://img.shields.io/badge/Page%20Object%20Model-Design%20Pattern-brightgreen?style=flat-rounded)
 ![GitHub License](https://img.shields.io/badge/License-MIT-yellow?style=flat-rounded)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/sudo-githubuser/swagLabs?style=flat-rounded)
-![GitHub Repo Size](https://img.shields.io/github/repo-size/sudo-githubuser/swagLabs?style=flat-rounded)
 
 
 ## 📌 About the Project

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a4a685-4bf6-47a0-935f-256cb3da078c" name="Changes" comment="Reading data from Excel file is implemented." />
+    <list default="true" id="74a4a685-4bf6-47a0-935f-256cb3da078c" name="Changes" comment="Reading data from Excel file is implemented.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +150,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/extentReport" />
+                        <option value="parallelExecution" />
                       </list>
                     </value>
                   </entry>
