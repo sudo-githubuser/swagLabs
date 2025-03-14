@@ -76,3 +76,40 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+
+  email:
+    needs: deploy  # Run email job after successful deployment
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Find Latest Extent Report
+        id: find_report
+        shell: pwsh
+        run: |
+          $latestReport = Get-ChildItem -Path reports\*.html | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+          Write-Output "Latest Report Found: $($latestReport.Name)"
+          echo "REPORT_FILE=$($latestReport.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Send Email with Report Attachment
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Extent Report: Test Execution Results"
+          body: |
+            Hello,
+
+            The latest **Extent Report** from test execution is attached. 📄
+
+            Check the report for details on the test execution.
+
+            Best Regards,  
+            GitHub Actions Bot 🤖
+          to: "ghost.deathrider007@example.com"
+          from: "praveen26mysore@gmail.com"
+          content_type: text/html
+          attachments: "${{ env.REPORT_FILE }}"  # Attach latest Extent Report       
