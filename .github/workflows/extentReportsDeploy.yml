@@ -97,7 +97,7 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: ${{ secrets.EMAIL_FROM }}
+          username: ${{ secrets.EMAIL_FROM }}  # Get email from Repo settings > GitHub > Secrets
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Extent Report: Test Execution Results"
           body: |
