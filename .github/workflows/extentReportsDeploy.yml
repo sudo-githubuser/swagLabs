@@ -97,7 +97,7 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: ${{ secrets.EMAIL_USERNAME }}
+          username: ${{ secrets.EMAIL_FROM }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Extent Report: Test Execution Results"
           body: |
@@ -109,7 +109,7 @@ jobs:
 
             Best Regards,  
             GitHub Actions Bot 🤖
-          to: "ghost.deathrider007@example.com"
-          from: "praveen26mysore@gmail.com"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_FROM }}
           content_type: text/html
           attachments: "${{ env.REPORT_FILE }}"  # Attach latest Extent Report       
