@@ -25,8 +25,9 @@ Ensure you have the following installed:
 - [Features](#-features)
 - [Tech Stack](#-tech-stack)
 - [Installation](#installation)
-- [Usage](#running-tests)
+- [Usage](#usage)
 - [Project Structure](#-project-structure)
+- [GitHub Actions](#-github-actions-config)
 - [Contribution](#-contribution)
 - [License](#-license)
 
@@ -55,7 +56,7 @@ cd swagLabs
 mvn clean install
 ```
 
-### Running Tests
+### Usage
 To run tests, execute:
 ```sh
 mvn test
@@ -74,6 +75,11 @@ mvn test
 ├── pom.xml
 └── README.md
 ```
+
+## ⚙️ GitHub Actions Config
+GitHub actions workflow is configured for testing, generating the extent report and:
+1. Sending the extent report through E-mail
+2. Publishing the report in GitHub pages
 
 ## 🤝 Contribution
 1. Fork the repository
